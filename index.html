@@ -6,25 +6,172 @@
     <link rel="stylesheet" href="./assets/css/all.css">
     <link rel="shortcut icon" href="/assets/image/logo/AyS_Soluciones.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2" rel="stylesheet"></head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
 <body>
-    <header>
+    <header class="nav">
         <img id="logo_header" src="./assets/image/logo/AyS_Soluciones.png" alt="logo de ays">
         <h1 id="titulo_header"><span id="Astyle">A</span>&<span id="Bstyle">S</span> Soluciones S.A.S</h1>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <a href="#">Inicio</a>
+        <nav class="nav-item">
+            <a class="nav-link active"href="#">Inicio</a>
             <a href="">Sobre Nosotros</a>
             <a href="">Servicios</a>
             <a href="">Contacta Nos</a>
         </nav>
     </header>
     <main>
-        <article></article>
-            <p></p>
-        </article>
+        <div id="contenedor-videoP" class="container d-flex bg-gen">
+                <video id="presentacion" src="./assets/video/BussinessManagerPresent.mp4" loop autoplay autocapitalize></video>
+                <div class="white  menu-services">
+                    <h3 class="d-flex justify-content-center">Nuestros Servicios</h3>
+                    <p>Tenemos diferentes servicios para apoyar el crecimiento, sostenimiento y desarrollo de tu negocio.<br> Mira mas a detalle estos servicios:</p>
+                    <ul class="menu-principal">
+                        
+                        <li class="nav-item-principal">
+                            <div class="text-line">
+                                <i id="link-menu" class="bi bi-wrench-adjustable-circle-fill iconsSubMenu"></i> Servicios Tecnicos <i class="bi bi-caret-down-fill"></i>
+                            </div>
+                            <div class="sub-item">
+                                <ul >
+                                    <li><a class="link-submenu" href="#">Reparación o mantenimiento de impresoras</a></li>
+                                    <li><a class="link-submenu" href="#repPC">Reparación o mantenimiento de computadores</a></li>
+                                    <li><a class="link-submenu" href="#">Instalación de herramientas office</a></li>
+                                    <li><a class="link-submenu" href="#">Optimización de computadores</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item-principal">
+                            <div class="text-line">
+                                <i class="bi bi-shield-fill-check iconsSubMenu"></i> Servicios de Seguridad <i class="bi bi-caret-down-fill"></i>
+                            </div>
+                            <div class="sub-item">
+                                <ul>
+                                    <li><a class="link-submenu" href="#">Instalación de Camaras</a></li>
+                                    <li><a class="link-submenu" href="#">Mantenimiento de Camaras</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item-principal">
+                            <div class="text-line">
+                                <i class="bi bi-file-code-fill"></i> Software <i class="bi bi-caret-down-fill"></i>
+                            </div>
+                            <div class="sub-item">
+                                <ul>
+                                    <li><a href="#" class="link-submenu">Bussines Manager</a></li>
+                                    <li><a href="#" class="link-submenu">Desarrollo de pagina web</a></li>
+                                    <li><a href="#" class="link-submenu">Desarrollo de programas</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="nit d-flex">
+            <section class="center nit-container">
+                <h4>Soluciones a su alcance</h4>
+            </section>
+        </div>
+
+        <div class="container services">
+
+            <div class="columns center">
+                <h2 class="sub-title"><span class="color-azul">Nuestros</span> <span class="color-rojo">Servicios</span></h2>
+                <p>Tenemos diferentes servicios para apoyar el <strong>crecimiento</strong>, <strong>sostenimiento</strong> y <strong>desarrollo de tu negocio.</strong></p>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="input-group flex-nowrap mb-2">
+                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Busca por categoria o nombre.." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+            <table id="myTable" class="table table-primary table table-hover is-redounded">
+                <thead>
+                  <tr class="table-dark">
+                    <th class="table-secondary" scope="col">Categoria</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción(resumen)</th>
+                    <th scope="col">opción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="repPC">
+                    <td class="table-secondary">Servicio Tecnico</td>
+                    <td >Reparación de Impresoras</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a> <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                  </tr>
+                  <tr>
+                    <td class="table-secondary">Servicio Tecnico</td>
+                    <td>Reparación de Computadores</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a> <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                  <tr>
+                    <td class="table-secondary">Servicio Tecnico</td>
+                    <td>Instalación de Herramientas Office</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a> <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                  <tr>
+                    <td class="table-secondary">Servicio Tecnico</td>
+                    <td>Optimización de Computadores</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a>  <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                  <tr>
+                    <td class="table-secondary">Servicio de Seguridad</td>
+                    <td>Instalación de Camaras</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a>  <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                  <tr>
+                    <td class="table-secondary">Software</td>
+                    <td>Bussines Manager</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a>  <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                  <tr>
+                    <td class="table-secondary">Software</td>
+                    <td>Desarrollo de Pagina Web</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a>  <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                  <tr>
+                    <td class="table-secondary">Software</td>
+                    <td>Desarrollo de programa</td>
+                    <td>Nos encargamos de devolverle la utilidad a esas impresoras viejas y que presentan problemas, dandote la oportunidad de volverlas a usar como la primera vez que la compraste</td>
+                    <td><a class="cotizar" href="#cotizar" title="cotizar"><i class="bi bi-currency-dollar table-op"></i></a>  <a title="Ver detalles" href=""><span class="material-symbols-outlined">
+                        data_info_alert
+                        </span></a></td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+
         <i id="wpIcon" class="bi bi-whatsapp"></i>
     </main>
-    <footer></footer>
+    <footer>
+        <img class="logo_footer" src="./assets/image/logo/AyS_Soluciones.png" alt="logo de ays">
+    </footer>
     <!-- Incluye el JS de SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./assets/js/script.js"></script>

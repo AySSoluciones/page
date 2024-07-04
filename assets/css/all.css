@@ -3,9 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
 }
 body{
-    background-color: #5180ef;
+    background-color: #000000;
 }
 
 /* <------ Estilos de Encabezado ----->*/
@@ -21,6 +22,8 @@ header{
     width: 100%;
     position: fixed;
     z-index: 10;
+    border-bottom: 1px solid #ededed;
+    box-shadow: 1px 1px 1px #ededed;
 }
 header > img:hover{
     box-shadow: 1px 2px 10px #f74b4b, -1px -2px 10px #5180ef;
@@ -38,10 +41,10 @@ header > img{
     padding: 10px 15px;
     border-radius: 5px;
     user-select: none;
-    font-size: 35px;
+    font-size: 220%;
 }
 #Astyle{
-    background-color: #5180ef;
+    background-color: #006ff7;
     color: #fff;
     padding: 0 2px;
     border-radius: 5px;
@@ -54,7 +57,7 @@ header > img{
 }
 nav{
     width: 50%;
-    height: 80px;
+    height: 70px;
     background-color: #000;
     gap: 35px;
     font-size: 20px;
@@ -66,20 +69,21 @@ nav::before{
     content: "";
     background-color: #fff;
     height: 121px;
-    width: 70px;
+    width: 9%;
     transform: rotate(45deg);
     position: relative;
-    top: -36%;
-    left: -4.1%;
+    top: -40%;
+    left: -2%;
 
 }
 nav > a {
     text-decoration: none;
     font-weight: 600;
+    font-size: 20px;
     color: #fff;
     transition: all 300ms;
 }
-a::after{
+nav > a::after{
     content: "";
     text-decoration: none;
     color: transparent;
@@ -93,17 +97,32 @@ a::after{
     border-radius: 5px;
     transition: all 300ms;
 }
-a:hover::after{
-    background-color: #5180ef;
+nav > a:hover::after{
+    background-color: #006ff7;
     border: 1px solid #4444444e;
     padding: 0 20px;
 }
-a:hover{
-    color: #5180ef;
+nav > a:hover{
+    color: #006ff7;
+}
+
+/* ------- video principal ----- */
+
+#presentacion{
+    height: 440px;
+    width: auto;
+    border-radius: 10px;
+}
+#presentacion:hover{
+    scale: 105%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px #333333;
 }
 
 /* <--------[Iconos Boostrap]--------> */
-
+.iconsSubMenu{
+    font-size: 20px;
+}
 .bi-whatsapp{
     font-size: 40px;
     color: #69ef51;
@@ -152,7 +171,18 @@ main{
 }
 
 /*contenedore*/
-
+.nit{
+    justify-content: center;
+}
+.nit-container{
+    padding: 7px 2px;
+    background-color: #006ff7;
+    width: 300px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #fff;
+    margin-bottom: 95PX;
+}
 .white{
     max-width: 90%;
     max-height: 90%;
@@ -160,4 +190,127 @@ main{
     height: auto;
     background-color: #fff;
 }
+.center{
+    text-align: center;
+}
+.color-azul{
+    color: #006ff7;
+}
+.color-rojo{
+    color: #f74b4b;
+}
+.sub-title{
+    font-weight: 700;
+    background-color: #f4f1eb;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 5px 0;
+}
+.bg-gen{
+    background-color: #006ff7;
+}
+#contenedor-videoP{
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 7px 10px;
+    height: auto;
+    align-items: center;
+}
+.menu-services{
+    width: 516px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 410px;
+    padding: 50px 25px;
+}
+.menu-services:hover{
+    border-radius: 15px;
+    scale: 110%;
+    box-shadow: #707070 1px 2px 15px;
+}
 
+/* Listas */
+ul{
+    list-style:none;
+    transition: all 300ms;
+}
+.nav-item-principal{
+    user-select: none;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.nav-item-principal > .text-line{
+    transition: all 300ms;
+    padding: 2px 7px;
+}
+.nav-item-principal > .text-line > .bi-caret-down-fill{
+    opacity: 0;
+}
+.nav-item-principal:hover > .text-line > .bi-caret-down-fill{
+    opacity: 1;
+}
+.sub-item{
+    display: none;
+}
+.nav-item-principal:hover > .sub-item{
+    display: flex;
+    color: #000000;
+    flex-direction: column;
+}
+.nav-item-principal:hover > i{
+    transform: rotate(180deg);
+}
+.nav-item-principal:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+    color: #51c7ef;
+}
+.link-submenu{
+    text-decoration: none;
+    color: #333333;
+}
+.link-submenu:hover{
+    color: #006ff7;
+    text-decoration:solid;
+}
+
+/* tabla */
+#myTable{
+    border-radius: 5px;
+}
+.table-op{
+    padding: 2px 4px;
+    background-color: #000;
+    color: #69ef51;
+    border-radius: 5px;
+    transition: all 100ms;
+}
+.table-op:hover{
+    color: #fff;
+}
+.material-symbols-outlined{
+    margin: 2px 2px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.material-symbols-outlined:hover{
+    background-color: #000;
+    color: #fff;
+}
+th:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    background-color: #000;
+    justify-content: space-around;
+    padding: 5px 37px;
+}
+.logo_footer{
+    height: 65px;
+    border-radius: 10px;
+}
